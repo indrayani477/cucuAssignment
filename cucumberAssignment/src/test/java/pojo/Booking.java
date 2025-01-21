@@ -55,5 +55,4 @@ public class Booking {
 		this.bookingdates = bookingdates;
 	}
 
-    // Getters and setters can be added if needed
 }

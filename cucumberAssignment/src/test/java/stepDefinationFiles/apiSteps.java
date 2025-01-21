@@ -27,14 +27,14 @@ public class apiSteps {
 
     @When("I send a POST request to {string} with valid payload")
     public void sendPostRequest(String endpoint) {
-        Booking booking = new Booking("John", "Doe", 150, true, new BookingDates("2025-01-20", "2025-01-25"));
+        Booking booking = new Booking("Raj", "Das", 150, true, new BookingDates("2025-01-20", "2025-01-25"));
         request = RestAssured.given().header("Content-Type", "application/json").body(booking);
         response = request.post(endpoint);
     }
 
     @When("I send a PUT request to {string} with updated payload")
     public void sendPutRequest(String endpoint) {
-        Booking updatedBooking = new Booking("Jane", "Doe", 200, false, new BookingDates("2025-02-01", "2025-02-05"));
+        Booking updatedBooking = new Booking("Akshya", "More", 200, false, new BookingDates("2025-02-01", "2025-02-05"));
         request = RestAssured.given().header("Content-Type", "application/json").body(updatedBooking);
         response = request.put(endpoint);
     }
